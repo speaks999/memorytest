@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { runAgent } from './agent';
 import { htmlDocumentStorage } from './storage';
 
@@ -11,6 +13,11 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from the dist directory (built frontend)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Health check
 app.get('/api/health', (_req, res) => {
@@ -77,6 +84,11 @@ app.post('/api/chat', async (req, res) => {
       error: error.message || 'An error occurred processing the chat message',
     });
   }
+});
+
+// Serve the React app for all non-API routes
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.listen(PORT, () => {
