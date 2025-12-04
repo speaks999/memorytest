@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok' });
 });
 
@@ -37,7 +37,7 @@ app.get('/api/document/:id', (req, res) => {
 });
 
 // List all HTML documents
-app.get('/api/documents', (req, res) => {
+app.get('/api/documents', (_req, res) => {
   try {
     const documents = htmlDocumentStorage.getAll();
     res.json({ documents });
