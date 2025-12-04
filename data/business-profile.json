@@ -1,0 +1,33 @@
+{
+  "companyName": "TechCorp Solutions",
+  "industry": "Technology Consulting",
+  "founded": "2020",
+  "employees": 150,
+  "headquarters": "San Francisco, CA",
+  "description": "TechCorp Solutions provides innovative technology consulting services to mid-market companies, specializing in cloud infrastructure, AI integration, and digital transformation.",
+  "services": [
+    "Cloud Infrastructure Setup",
+    "AI and Machine Learning Integration",
+    "Digital Transformation Consulting",
+    "Custom Software Development",
+    "Data Analytics Solutions"
+  ],
+  "keyClients": [
+    "Fortune 500 Financial Services",
+    "Healthcare Systems Inc",
+    "Retail Innovations Group"
+  ],
+  "mission": "Empower businesses with cutting-edge technology solutions that drive growth and innovation.",
+  "values": [
+    "Innovation",
+    "Customer-Centricity",
+    "Integrity",
+    "Excellence"
+  ],
+  "contact": {
+    "email": "contact@techcorpsolutions.com",
+    "phone": "+1-555-0123",
+    "website": "https://www.techcorpsolutions.com"
+  }
+}
+
